@@ -1,0 +1,21 @@
+[debug] [2024-02-23T22:06:06.499Z] ----------------------------------------------------------------------
+[debug] [2024-02-23T22:06:06.502Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\wnifla\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-02-23T22:06:06.502Z] CLI Version:   13.3.1
+[debug] [2024-02-23T22:06:06.503Z] Platform:      win32
+[debug] [2024-02-23T22:06:06.503Z] Node Version:  v20.11.1
+[debug] [2024-02-23T22:06:06.503Z] Time:          Fri Feb 23 2024 17:06:06 GMT-0500 (hora estándar de Perú)
+[debug] [2024-02-23T22:06:06.503Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-23T22:06:06.511Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-23T22:06:06.512Z] > authorizing via signed-in user (dhorecreacion@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\wnifla\Desktop\BATEAS\DHO\2023\PROYECTOS\App_Mantenimiento
+

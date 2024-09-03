@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Mostrar Trabajo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="dashboard.html">Mantenimiento Preventivo</a>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Buscar por..." aria-label="Buscar por..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="Login.html">Logout</a></li><!--para salir-->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="dashboard.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Procesos</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Activos
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="Registrar_Activo.html">Registrar Activos</a>
+                                    <a class="nav-link" href="Mostrar_Activo.html">Ver Activos</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Mantenimiento
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link" href="Registrar_Mantenimiento.html" >
+                                        Registrar Trabajos Mantenimiento
+                                    </a>
+                                    
+                                    <a class="nav-link" href="Mostrar_Trabajo.html" >
+                                        Ver Trabajos de Mantenimiento
+                                    </a>
+                                    
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Configuración</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Mantenimiento Preventivo DHO
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">TRABAJOS</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Mantenimiento Preventivo DHO - Calidad de Vida</li>
+                        </ol>
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Mostrar Trabajos
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Estado</th>
+                                            <th>Prioridad</th>
+                                            <th>Nombre de Activo</th>
+                                            <th>Campamento</th>
+                                            <th>Ubicacion</th>
+                                            <th>Propietario</th>
+                                            <th>Condición</th>
+                                            <th>Tipo de Mantenimiento</th>
+                                            <th>Programado</th>
+                                            <th>Próxima Fecha</th>
+                                            <th>Costo</th>
+                                            <th>Responsable</th>
+                                            <th>Accion</th>
+                                        </tr>
+                                    </thead>
+                                    <!--<tfoot>
+                                        <tr>
+                                            <th>Names</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+                                            <th>Salary</th>
+                                            <th>Salary2</th>
+                                        </tr>
+                                    </tfoot>-->
+                                    <tbody>
+                                        <tr>
+                                            <td>MB0000001</td>
+                                            <td>Pendiente</td>
+                                            <td>Alta</td>
+                                            <td>Marmita Industrial</td>
+                                            <td>Zona Reservada</td>
+                                            <td>Comedor Principal</td>
+                                            <td>Bateas</td>
+                                            <td>Buena</td>
+                                            <td>Preventivo</td>
+                                            <td>02.01.24</td>
+                                            <td>02.02.24</td>
+                                            <td>30.00</td>
+                                            <td>Alvaro Arenas</td>
+                                            <td><a class="btn btn-primary" href="Levantar_Mantenimiento.html" role="button">+</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>MB0000002</td>
+                                            <td>Pendiente</td>
+                                            <td>Alta</td>
+                                            <td>Campana Extractora</td>
+                                            <td>Zona Reservada</td>
+                                            <td>Comedor Principal</td>
+                                            <td>Bateas</td>
+                                            <td>Buena</td>
+                                            <td>Preventivo</td>
+                                            <td>04.01.24</td>
+                                            <td>04.02.24</td>
+                                            <td>20.00</td>
+                                            <td>Alvaro Arenas</td>
+                                            <td><a class="btn btn-primary" href="Levantar_Mantenimiento.html" role="button">+</a></td>
+                                        </tr>                                      
+                                        
+                                        <tr>
+                                            <td>MB0000002</td>
+                                            <td>Pendiente</td>
+                                            <td>Media</td>
+                                            <td>Marmita</td>
+                                            <td>Zona Reservada</td>
+                                            <td>Comedor</td>
+                                            <td>Bateas</td>
+                                            <td>Buena</td>
+                                            <td>Preventivo</td>
+                                            <td>27.03.24</td>
+                                            <td>27.04.24</td>
+                                            <td>20.00</td>
+                                            <td>Alvaro Arenas</td>
+                                            <td><a class="btn btn-primary" href="Levantar_Mantenimiento.html" role="button">+</a></td>
+                                        </tr>   
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Mantenimiento Preventivo DHO 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
